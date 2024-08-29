@@ -4,6 +4,7 @@
 }
 * {
     font-family: "SequelSans";
+
 }
 body {
     background-color: rgb(26, 98, 65);
@@ -17,9 +18,15 @@ body {
 h1, h2, h3, p {
     color: white;
 }
+h1, h2, h3{
+    letter-spacing: 3px;
+}
+p{
+    letter-spacing: 2px;
+}
 .contenedorTitulos{
     position: relative;
-    right: 50px;
+    right: 70px;
     height: 100px;
 }
 .subtitulo{
@@ -30,15 +37,49 @@ h1, h2, h3, p {
     margin-top: 5px;
 }
 
-.textoFilosofia, .tituloFilosofia, .tituloSobNos, .textoSobNos{
+.textoFilosofia, .tituloFilosofia, .tituloSobNos, .textoSobNos, .textoEventos {
     padding: 0px 5px;
     line-height: 25px;
 }
-.contenedorFilosofia, .contenedorSobreNosotros, .imgBody{
+.contenedorFilosofia, .contenedorSobreNosotros, .imgBody, .contenedorEventos, .card{
     box-shadow: 12px 12px 12px rgb(14, 77, 47),
     -10px -10px 10px rgb(37, 109, 76) ;
     border-radius: 10px;
 }
 .imgBody{
     margin: 20px 0px;
+}
+.slider {
+    width: 100%;
+    overflow: hidden; /* Oculta el contenido que se sale del contenedor */
+    margin-top: 20px; /* Espacio entre el slider y la sección anterior */
+}
+
+.slider-track {
+    display: flex; /* Permite que las tarjetas se alineen en una fila */
+    width: calc(300px * 6); /* Ajusta el ancho de la pista al número total de tarjetas */
+    animation: scroll 15s linear infinite; /* Animación continua */
+}
+.slider-track.paused {
+    animation-play-state: paused; /* Pausa la animación */
+}
+.card {
+    width: 220px;
+    margin: 0 10px;
+    background-color: (26, 98, 65);
+    border-radius: 10px;
+    text-align: center;
+    img{
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
