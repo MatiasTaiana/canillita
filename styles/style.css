@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "SequelSans";
+    src: url(../fuentes/SequelSansBlackOblDisp.ttf);
+}
+* {
+    font-family: "SequelSans";
+}
+body {
+    background-color: rgb(26, 98, 65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo {
+    width: 100px;
+}
+h1, h2, h3, p {
+    color: white;
+}
+.contenedorTitulos{
+    position: relative;
+    right: 50px;
+    height: 100px;
+}
+.subtitulo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    margin-top: 5px;
+}
+
+.textoFilosofia, .tituloFilosofia, .tituloSobNos, .textoSobNos{
+    padding: 0px 5px;
+    line-height: 25px;
+}
+.contenedorFilosofia, .contenedorSobreNosotros, .imgBody{
+    box-shadow: 12px 12px 12px rgb(14, 77, 47),
+    -10px -10px 10px rgb(37, 109, 76) ;
+    border-radius: 10px;
+}
+.imgBody{
+    margin: 20px 0px;
+}
