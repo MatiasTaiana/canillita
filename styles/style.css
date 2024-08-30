@@ -11,9 +11,33 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0;
+    scroll-behavior: smooth;
 }
+/* Estilo para el contenedor del logo centrado horizontalmente */
+.contenedorLogo {
+    position: absolute;
+    top: 20px; /* Ajusta según sea necesario */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    transition: all 0.7s ease; /* Animación para el cambio de tamaño y posición */
+    z-index: 1000; /* Asegura que el logo esté sobre otros elementos */
+}
+
+/* Estilo para el logo original */
 .logo {
-    width: 100px;
+    width: 100px; /* Tamaño original del logo */
+    height: auto; /* Mantener la proporción del logo */
+    transition: all 0.7s ease;
+}
+
+/* Estilo para el logo reducido y fijo en la esquina superior izquierda */
+.shrink-logo {
+    width: 40px; /* Tamaño reducido del logo */
+    height: auto; /* Mantener la proporción del logo */
+    position: fixed; /* Fija el logo en la esquina superior izquierda */
+    top: 0;
+    left: 0;
+    transform: none; /* Quita la transformación de centrado horizontal */
 }
 h1, h2, h3, p {
     color: white;
@@ -26,12 +50,27 @@ p{
 }
 .contenedorTitulos{
     position: relative;
+    padding-top: 150px;
     width: 100%;
     padding-bottom: 50px;
 }
 .titulo{
     margin-left: 20px;
     margin-bottom: 0px;
+    transition: all 1s ease;
+}
+.titulo-fixed {
+    position: fixed;
+    top: 0px; /* Ajusta según tus preferencias */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em; /* Tamaño ajustado para cuando esté fijo */
+    z-index: 999;
+    margin: 0;
+    border-style: solid;
+    padding: 0px 5px;
+    background-color: rgba(255, 255, 255, 0.137);
+    backdrop-filter: blur(4px);
 }
 .subtitulo{
     position: absolute;
@@ -67,18 +106,17 @@ p{
     animation: scroll 10s linear infinite; /* Animación continua */
     padding: 20px;
     position: relative; /* Necesario para el posicionamiento absoluto del gradiente */
-    cursor: grab;
 }
-.slider-track:active {
-    cursor: grabbing; /* Cambia el cursor cuando se está arrastrando */
-}
+
 .card {
     min-width: 180px;
-    max-width: 220px; /* Mantiene el ancho fijo de 220px */
+    max-width: 220px;
     margin: 0 10px;
     background-color: rgb(26, 98, 65);
     border-radius: 10px;
     text-align: center;
+    flex: 0 0 100%;
+    box-sizing: border-box;
 }
 
 .card img {
