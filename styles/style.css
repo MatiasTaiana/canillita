@@ -70,7 +70,7 @@ p{
     cursor: grabbing; /* Cambia el cursor cuando se está arrastrando */
 }
 .card {
-    flex: 0 0 220px; /* Mantiene el ancho fijo de 220px */
+    width: 220px; /* Mantiene el ancho fijo de 220px */
     margin: 0 10px;
     background-color: rgb(26, 98, 65);
     border-radius: 10px;
