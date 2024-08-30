@@ -26,15 +26,9 @@ p{
 }
 .contenedorTitulos{
     position: relative;
-    right: 70px;
-    height: 100px;
 }
 .subtitulo{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300px;
-    margin-top: 5px;
 }
 .textoFilosofia, .tituloFilosofia, .tituloSobNos, .textoSobNos, .textoEventos {
     padding: 0px 5px;
@@ -60,7 +54,7 @@ p{
 
 .slider-track {
     display: flex; /* Permite que las tarjetas se alineen en una fila */
-    width: max-content; /* Ajusta el ancho de la pista al contenido */
+    width: auto; /* Ajusta el ancho de la pista al contenido */
     animation: scroll 10s linear infinite; /* Animación continua */
     padding: 20px;
     position: relative; /* Necesario para el posicionamiento absoluto del gradiente */
@@ -70,7 +64,8 @@ p{
     cursor: grabbing; /* Cambia el cursor cuando se está arrastrando */
 }
 .card {
-    width: 220px; /* Mantiene el ancho fijo de 220px */
+    min-width: 180px;
+    max-width: 220px; /* Mantiene el ancho fijo de 220px */
     margin: 0 10px;
     background-color: rgb(26, 98, 65);
     border-radius: 10px;
