@@ -26,9 +26,18 @@ p{
 }
 .contenedorTitulos{
     position: relative;
+    width: 100%;
+    padding-bottom: 50px;
+}
+.titulo{
+    margin-left: 20px;
+    margin-bottom: 0px;
 }
 .subtitulo{
     position: absolute;
+    width: 240px;
+    margin: 3px 0px;
+    left: 90px;
 }
 .textoFilosofia, .tituloFilosofia, .tituloSobNos, .textoSobNos, .textoEventos {
     padding: 0px 5px;
