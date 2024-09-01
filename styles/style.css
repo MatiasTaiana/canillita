@@ -78,9 +78,11 @@ p{
     margin: 3px 0px;
     left: 90px;
 }
-.textoFilosofia, .tituloFilosofia, .tituloSobNos, .textoSobNos, .textoEventos {
+.textoFilosofia, .tituloFilosofia, .tituloSobNos, .textoSobNos, .textoEventos, .tituloEventos {
     padding: 0px 5px;
     line-height: 25px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 .contenedorFilosofia, .contenedorSobreNosotros, .imgBody, .contenedorEventos, .card{
     box-shadow: 12px 12px 12px rgb(14, 77, 47),
@@ -178,4 +180,7 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+.contenedorEventos{
+
 }

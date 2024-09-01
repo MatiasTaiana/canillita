@@ -1,19 +1,5 @@
-    // let currentIndex = 0; // Índice inicial
-    // const sliderTrack = document.querySelector('.slider-track');
-    // const cards = document.querySelectorAll('.card');
-    // const totalCards = cards.length;
 
-    // function slide() {
-    //     currentIndex++;
-    //     if (currentIndex >= totalCards) {
-    //         currentIndex = 0; // Reinicia el índice al alcanzar el final
-    //     }
-    //     sliderTrack.style.transform = `translateX(-${currentIndex * (cards[0].offsetWidth + 20)}px)`; // Desplaza el track
-    // }
-
-    // setInterval(slide, 3000); // Cambia la tarjeta cada 3 segundos
-
-
+AOS.init();
 
  // Selecciona el contenedor del track del slider
 const sliderTrack = document.querySelector('.slider-track');
