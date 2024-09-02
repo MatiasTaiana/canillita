@@ -1,28 +1,6 @@
 
 AOS.init();
 
- // Selecciona el contenedor del track del slider
-const sliderTrack = document.querySelector('.slider-track');
-
-// Clona el contenido del slider para un bucle continuo
-const sliderContent = sliderTrack.innerHTML;
-sliderTrack.innerHTML += sliderContent;
-
-// Variable para controlar el estado de la animación
-let isPaused = false;
-
-// Añade un evento de clic a cada tarjeta para pausar/reanudar la animación
-document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', () => {
-        if (isPaused) {
-            sliderTrack.classList.remove('paused');
-            isPaused = false;
-        } else {
-            sliderTrack.classList.add('paused');
-            isPaused = true;
-        }
-    });
-});
 
 // Selecciona el contenedor del logo
 const logoContainer = document.querySelector('.contenedorLogo');

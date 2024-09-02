@@ -84,7 +84,7 @@ p{
     margin-left: 3px;
     margin-right: 3px;
 }
-.contenedorFilosofia, .contenedorSobreNosotros, .imgBody, .contenedorEventos, .card{
+.contenedorFilosofia, .contenedorSobreNosotros, .imgBody, .contenedorEventos, .contenedorHorarios, .card, .item{
     box-shadow: 12px 12px 12px rgb(14, 77, 47),
     -10px -10px 10px rgb(37, 109, 76) ;
     border-radius: 20px;
@@ -94,92 +94,11 @@ p{
     border-radius: 100%;
     margin: 20px 0px;
 }
-.slider {
-    width: 100%;
-    overflow: hidden; /* Oculta el contenido que se sale del contenedor */
-    margin-top: 20px; /* Espacio entre el slider y la sección anterior */
-    position: relative; /* Necesario para el posicionamiento absoluto */     
-    margin: 30px 0px;
-}
-
-.slider-track {
-    display: flex; /* Permite que las tarjetas se alineen en una fila */
-    width: auto; /* Ajusta el ancho de la pista al contenido */
-    animation: scroll 10s linear infinite; /* Animación continua */
-    padding: 20px;
-    position: relative; /* Necesario para el posicionamiento absoluto del gradiente */
-}
-
-.card {
-    min-width: 180px;
-    max-width: 220px;
-    margin: 0 10px;
-    background-color: rgb(26, 98, 65);
-    border-radius: 10px;
-    text-align: center;
-    flex: 0 0 100%;
-    box-sizing: border-box;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* Gradiente de desvanecimiento a la izquierda */
-.slider::before {
-    z-index: 1;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40px; /* Ancho del gradiente */
-    height: 100%;
-    background: linear-gradient(to right, rgb(26, 98, 65), transparent);
-    pointer-events: none; /* Permite que los eventos pasen a través del gradiente */
-}
-
-/* Gradiente de desvanecimiento a la derecha */
-.slider::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40px; /* Ancho del gradiente */
-    height: 100%;
-    background: linear-gradient(to left, rgb(26, 98, 65), transparent);
-    pointer-events: none; /* Permite que los eventos pasen a través del gradiente */
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
+.contenedorEventos{
+    .imgContenedor{
+        width: 200px;
+        top: -100px;
     }
-    100% {
-        transform: translateX(calc(-230px * 3)); /* Mueve el slider por el ancho total de las tarjetas más márgenes */
-    }
-}
-
-.slider-track.paused {
-    animation-play-state: paused;
-}
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    position: relative;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
 
 .imgContenedor{
@@ -191,14 +110,57 @@ footer a:hover {
     right: -5px;
 }
 .contenedorSobreNosotros{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .imgContenedorSob{
-    width: 90px;
+    width: 200px;
     border-radius: 100%;
     position: absolute;
-    bottom: -50px;
+    bottom: -110px;
     right: 5px;
+}
+.contenedorGaleria{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.imgGaleria{
+    width: 35%;
+}
+.contenedorHorarios{
+    padding: 20px;
+}
+.horario{
+    color: white;
+}
+footer {
+    background-image: url(./ngRNL73du_340x340__1.jpg);
+    color: #fff;
+    text-align: center;
+    width: 100vw;
+    position: relative;
+    font-size: 2rem;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
+    p{
+        padding-top: 0px;
+    }
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 @media screen and (min-width:605px){
     body{
@@ -223,9 +185,97 @@ footer a:hover {
     }
     .contenedorEventos, .contenedorFilosofia, .contenedorSobreNosotros{
         width: 605px;
-            background-color: rgb(26, 98, 65);
+        background-color: rgb(26, 98, 65);
+        margin: 100px;
     }
     .slider{
         width: 75%;
     }
+    .imgBody{
+        margin: 100px;
+    }
+    .contenedorHorarios{
+        margin: 30px 200px;
+    }
+    .imgGaleria{
+        width: 25%;
+    }
 }
+.wrapper {
+    margin: 80px;
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 500px;
+    margin-top: 5rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+  
+  @keyframes scrollLeft {
+    to {
+      left: -500px;
+    }
+  }
+  
+  .item {
+    width: 220px;
+    background-color: red;
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(200px * 8), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 35s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background-color: rgb(26, 98, 65);
+    border-radius: 10px;
+    text-align: center;
+    img{
+        width: 200px;
+        width: 100%;
+        border-radius: 5%;
+    }
+    p{
+        padding: 0px 5px;
+    }
+  }
+  
+  .item1 {
+    animation-delay: calc(35s / 8 * (8 - 1) * -1);
+  }
+  
+  .item2 {
+    animation-delay: calc(35s / 8 * (8 - 2) * -1);
+  }
+  
+  .item3 {
+    animation-delay: calc(35s / 8 * (8 - 3) * -1);
+  }
+  
+  .item4 {
+    animation-delay: calc(35s / 8 * (8 - 4) * -1);
+  }
+  
+  .item5 {
+    animation-delay: calc(35s / 8 * (8 - 5) * -1);
+  }
+  
+  .item6 {
+    animation-delay: calc(35s / 8 * (8 - 6) * -1);
+  }
+  
+  .item7 {
+    animation-delay: calc(35s / 8 * (8 - 7) * -1);
+  }
+  
+  .item8 {
+    animation-delay: calc(35s / 8 * (8 - 8) * -1);
+  }
