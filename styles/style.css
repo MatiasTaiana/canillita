@@ -200,3 +200,32 @@ footer a:hover {
     bottom: -50px;
     right: 5px;
 }
+@media screen and (min-width:605px){
+    body{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contenedorTitulos{
+        display: flex;
+        justify-content: center;
+        .titulo{
+            font-size: 62px;
+        }
+        .subtitulo{
+            position: absolute;
+            top: 75%;
+            left: 55%;
+            font-size: 40px;
+            width: 400px;
+        }
+    }
+    .contenedorEventos, .contenedorFilosofia, .contenedorSobreNosotros{
+        width: 605px;
+            background-color: rgb(26, 98, 65);
+    }
+    .slider{
+        width: 75%;
+    }
+}
