@@ -177,7 +177,7 @@ footer a:hover {
         }
         .subtitulo{
             position: absolute;
-            top: 75%;
+            top: 80%;
             left: 55%;
             font-size: 40px;
             width: 400px;
@@ -201,6 +201,7 @@ footer a:hover {
         width: 25%;
     }
 }
+
 .wrapper {
     margin: 80px;
     width: 90%;
@@ -279,3 +280,41 @@ footer a:hover {
   .item8 {
     animation-delay: calc(35s / 8 * (8 - 8) * -1);
   }
+  @media screen and (min-width:1885px) {
+    .imgBody{
+        width: 30%;
+        margin: 150px;
+    }
+    h3{
+        font-size: xx-large;
+    }
+    p{
+        font-size: larger;
+    }
+    .imgContenedor{
+        width: 180px;
+        top: -110px;
+    }
+    .imgContenedorSob{
+        width: 350px;
+        border-radius: 100%;
+        position: absolute;
+        bottom: 110px;
+        right: 5px;
+    }
+    .contenedorEventos{
+        .imgContenedor{
+            width: 350px;
+            position: absolute;
+            right: 100px;
+            top: -200px;
+        }
+    }
+    .wrapper{
+        height: 650px;
+    }
+    .item{
+        width: 300px;
+        left: max(calc(300px * 8), 100%);
+    }
+}
