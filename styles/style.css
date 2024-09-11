@@ -39,6 +39,20 @@ body {
     left: 0;
     transform: none; /* Quita la transformación de centrado horizontal */
 }
+.hero{
+    width: 80%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    background-color:rgb(0, 61, 34);
+    padding: 20px 80px;
+    .tituloHero{
+        font-size: 80px;
+    }
+    .imgHero{
+        width: 60%;
+    }
+}
 h1, h2, h3, p {
     color: white;
 }
@@ -58,6 +72,7 @@ p{
     margin-left: 20px;
     margin-bottom: 0px;
     transition: all 1s ease;
+    letter-spacing: 8px;
 }
 .titulo-fixed {
     position: fixed;
@@ -77,6 +92,7 @@ p{
     width: 240px;
     margin: 3px 0px;
     left: 90px;
+    letter-spacing: 5px;
 }
 .textoFilosofia, .tituloFilosofia, .tituloSobNos, .textoSobNos, .textoEventos, .tituloEventos {
     padding: 0px 5px;
@@ -316,5 +332,24 @@ footer a:hover {
     .item{
         width: 300px;
         left: max(calc(300px * 8), 100%);
+    }
+    .contenedorHorarios{
+        width: 350px;
+        height: 190px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .tituloHorarios{
+            margin-bottom: 10px;
+
+        }
+        .horarios{
+            margin-top: 0;
+        }
+        .horario{
+            font-size: 22px;
+            margin: 5px;
+            letter-spacing: 2px;
+        }
     }
 }
